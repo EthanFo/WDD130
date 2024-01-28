@@ -1,0 +1,22 @@
+body {
+    background-color: #A5AA79;
+    text-align: center;
+}
+
+/* . means class, # means tag */
+.nav_link { 
+    padding: 15px;
+    color: #FBF7F0;
+    background-color: #353B34;
+    font-size: 1.3em;
+    text-decoration-line: none;
+}
+
+img {
+    width: 300px;
+}
+
+#main_title {
+    font-size: 4em;
+    color: #253C4C;
+}

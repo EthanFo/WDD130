@@ -4,18 +4,30 @@
         content="width=device-width,
         initial-scale=1.0">
         <title>WDD130 : Home</title>
+        <link href="styles/styles_fun.css" rel="stylesheet">
     </head>
     <body>
-        <nav>
-            <a href="wwr/index.html">White Water Rafting Website</a>
-            <a href="wwr/site-plan-rafting.html">White Water Rafting Siteplan</a>
-            <a href="positioning.html">Positioning Activity</a>
-            <a href="#">Personal Website</a>
-            <a href="#">Personal Siteplan</a>
+        <nav class="menu">
+            <a class="nav_link" href="wwr/index.html">White Water Rafting Website</a>
+            <a class="nav_link" href="wwr/site-plan-rafting.html">White Water Rafting Siteplan</a>
+            <a class="nav_link" href="positioning.html">Positioning Activity</a>
+            <a class="nav_link" href="#">Personal Website</a>
+            <a class="nav_link" href="#">Personal Siteplan</a>
         </nav>
-        <h1>Ethan Foltz</h1>
+        <!-- for mobile -->
+        <button type="button" class="menu_expand nav_link">Menu</button>
+            <div class ="content nav_link">
+                <p><a class="nav_link" href="wwr/index.html">White Water Rafting Website</a></p>
+                <p><a class="nav_link" href="wwr/site-plan-rafting.html">White Water Rafting Siteplan</a></p>
+                <p><a class="nav_link" href="positioning.html">Positioning Activity</a></p>
+                <p><a class="nav_link" href="#">Personal Website</a></p>
+                <p><a class="nav_link" href="#">Personal Siteplan</a></p>
+                <!-- <p>your mom</p>
+                <p>tuma</p> -->
+            </div>
+        <h1 id="main_title">Ethan Foltz</h1>
         <!-- Image of me -->
-        <img src="pic_of_me_4.jpg" alt="Picture of Me" width="500">
+        <img src="pic_of_me_4.jpg" alt="Picture of Me">
         <p>My name is Ethan Foltz, I'm from Vancouver, Washington. Fun fact, Usually when I tell people this,<br>
             they either think I'm saying that I'm from Washington DC, or from Canada, neither of which are true.</p>
         <p>I'm studying Computer Engineering. I'm not sure what exactly I do, but I think I will have lots of good <br>
@@ -23,5 +35,6 @@
             understanding of computers would be pretty helpful.</p>
         <p>I have too many hobbies to list, but my most recent hobbies are snowboarding, playing/creating music,<br>
             building computers, going to the gym, solving rubiks cubes, making art, and occasionally playing video games.</p>
+        <script src="scripts.js"></script>
     </body>
 </html>
