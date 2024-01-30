@@ -1,30 +1,55 @@
+/* 
+Color Scheme:
+floral white    #FBF7F0
+charcoal        #253C4C
+Dark Moss Green #656641
+Platinum        #E7E2DE
+Black Olive     #2A2F2A
+*/
+
+/*========== This affects everything ==============*/
+
 body {
     background-color: #A5AA79;
     text-align: center;
 }
 
-/* . means class, # means tag */
+/*========= Beginning of Header ==========*/
+header {
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #353B34;
+}
+
 .nav_link { 
     padding: 15px;
     color: #FBF7F0;
     background-color: #353B34;
     font-size: 1.3em;
-    text-decoration-line: none;
+    text-decoration: none;
 }
 
-img {
-    width: 300px;
-}
+/* Style the button that is used to open and close the collapsible content */
+  /* This adds a background color to the button if it is clicked on 
+  (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .menu_expand:hover {
+    background-color: #656641;
+    color: #FBF7F0;
+  }
 
-#main_title {
-    font-size: 4em;
-    color: #253C4C;
-}
-
-.menu_expand {
+.menu_expand { /*These are the defaults. 
+    In order to change how it looks when 
+    it is displayed go to media only screen below*/
     display: none;
+    justify-content: center;
     text-align: center;
-}
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+  }
 
 @media only screen and (min-width: 320px) and (max-width: 768px){
     .menu_expand {
@@ -34,28 +59,56 @@ img {
         display: none;
     }
 }
+/* Style the collapsible content. Note: hidden by default */
+.content_expand {
+   padding: 0;
+   overflow: hidden;
+   max-height: 0;
+   transition: max-height 0.2s ease-out;
+ }
 
-/* Style the button that is used to open and close the collapsible content */
-.menu_expand {
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .menu_expand:hover {
-    background-color: #353B34;
+/*================== End of Header =====================*/
+
+/*============ Beginning of Main Content =============*/
+#main_title {
+    font-size: 4em;
+    color: #253C4C;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+#content {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #E7E2DE;
+}
+
+img {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* #img_me { /* for if I want to make specific adjustments to my image
+
+} */
+
+/*============= End of Main Content ================*/
+
+/*=============== Beginning of Footer ===============*/
+  footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 20px;
+    margin: 0 auto;
+    padding: 20px;
     color: #FBF7F0;
+    background-color: #353B34;
   }
-  
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
-    padding: 0 18px;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
+
+  footer a {
+    color: #FBF7F0;
   }
