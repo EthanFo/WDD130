@@ -22,25 +22,26 @@ header {
 }
 
 .nav_link { 
+    display: flex;
+    flex-direction: column;
     padding: 15px;
     color: #FBF7F0;
     background-color: #353B34;
-    font-size: 1.3em;
+    font-size: 1em;
     text-decoration: none;
 }
 
 /* Style the button that is used to open and close the collapsible content */
   /* This adds a background color to the button if it is clicked on 
   (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .menu_expand:hover {
+  .active, .menu_button:hover {
     background-color: #656641;
     color: #FBF7F0;
   }
 
-.menu_expand { /*These are the defaults. 
+.menu_button { /*These are the defaults. 
     In order to change how it looks when 
     it is displayed go to media only screen below*/
-    display: none;
     justify-content: center;
     text-align: center;
     cursor: pointer;
@@ -49,23 +50,32 @@ header {
     border: none;
     outline: none;
     font-size: 15px;
+    padding: 15px;
+    color: #FBF7F0;
+    background-color: #353B34;
+    font-size: 1em;
+    text-decoration: none;
   }
 
-@media only screen and (min-width: 320px) and (max-width: 768px){
-    .menu_expand {
-        display: block;
+.content_expand {
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+@media only screen and (min-width: 700px){
+    .menu_button {
+      display: none;
     }
-    .menu {
-        display: none;
+    .nav_link {
+      flex-direction: row;
+    }
+    .content_expand {
+      max-height: fit-content;
     }
 }
 /* Style the collapsible content. Note: hidden by default */
-.content_expand {
-   padding: 0;
-   overflow: hidden;
-   max-height: 0;
-   transition: max-height 0.2s ease-out;
- }
 
 /*================== End of Header =====================*/
 
