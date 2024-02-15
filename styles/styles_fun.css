@@ -12,6 +12,14 @@ Black Olive     #2A2F2A
 body {
     background-color: #A5AA79;
     text-align: center;
+    margin: 0 auto;
+}
+
+#content {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #E7E2DE;
+    padding: 0%;
 }
 
 /*========= Beginning of Header ==========*/
@@ -19,6 +27,10 @@ header {
     padding: 20px;
     margin: 0 auto;
     background-color: #353B34;
+    justify-content: center;
+    display: block;
+    position: fixed;
+    width: 100%;
 }
 
 .nav_link { 
@@ -29,6 +41,7 @@ header {
     background-color: #353B34;
     font-size: 1em;
     text-decoration: none;
+    justify-content: center;
 }
 
 /* Style the button that is used to open and close the collapsible content */
@@ -80,19 +93,24 @@ header {
 /*================== End of Header =====================*/
 
 /*============ Beginning of Main Content =============*/
+main {
+  padding: 10px;
+  padding-top: 60px;
+  box-shadow: 5px 5px 5px gray;
+}
+
 #main_title {
     font-size: 4em;
     color: #253C4C;
 }
 
-h2 {
-    text-decoration: underline;
+main p {
+  padding: 10px 200px;
+  justify-content: left; /*not working???*/
 }
 
-#content {
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #E7E2DE;
+h2 {
+    text-decoration: underline;
 }
 
 img {
@@ -101,10 +119,21 @@ img {
     margin: 0 auto;
 }
 
-/* #img_me { /* for if I want to make specific adjustments to my image
 
-} */
+#img_me {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+  grid-column: 1/2;
+  grid-row: 2/5;
+  box-shadow: 15px 15px 20px gray;
+  transition: transform .5s;
+}
 
+#img_me:hover {
+  opacity: 6;
+  transform: scals(1.1);
+}
 /*============= End of Main Content ================*/
 
 /*=============== Beginning of Footer ===============*/
@@ -112,7 +141,7 @@ img {
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 20px;
+    height: 50px;
     margin: 0 auto;
     padding: 20px;
     color: #FBF7F0;
@@ -122,3 +151,6 @@ img {
   footer a {
     color: #FBF7F0;
   }
+
+  /* footer p {
+  } */
