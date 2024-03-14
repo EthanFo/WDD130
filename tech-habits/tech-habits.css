@@ -1,0 +1,113 @@
+/* 
+393D3F - onyx
+D5BBB1 - pale dogwood
+9CC4B2 - cambridge blue
+C98CA7 - puce
+7D80DA - tropical indigo 
+*/
+
+body {
+    background-color: #D5BBB1;
+    margin: 0 auto;
+}
+
+#content {
+    background-color: #D5BBB1;
+    padding: 0px 15%;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 1000px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 10% 0;
+}
+
+img {
+    margin: 0 auto
+}
+
+/* Header */
+header {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    /* position: fixed; */
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #7D80DA;
+    width: 100%;
+}
+
+.nav_link { 
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    color: #FBF7F0;
+    background-color: #7D80DA;
+    font-size: 1em;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.active, .menu_button:hover {
+    background-color: #656641;
+    color: #FBF7F0;
+  }
+
+.menu_button { /*These are the defaults. 
+    In order to change how it looks when 
+    it is displayed go to media only screen below*/
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 15px;
+    color: #FBF7F0;
+    background-color: #353B34;
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+.content_expand {
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+/* end of header */
+
+/* footer */
+    footer {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height: 50px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #FBF7F0;
+        background-color: #7D80DA;
+    }
+
+  footer a {
+    color: #FBF7F0;
+  }
+/* end of footer */
+
+@media only screen and (min-width: 900px){
+    .menu_button {
+      display: none;
+    }
+    .nav_link {
+      flex-direction: row;
+    }
+    .content_expand {
+      max-height: fit-content;
+    }
+}

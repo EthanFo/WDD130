@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Tech Habits</title>
+    <link rel="stylesheet" href="tech-habits.css">
+</head>
+<body>
+    <header>
+        <button type="button" class="menu_button">Menu</button>
+            <div class ="content_expand nav_link">
+                <a class="nav_link" href="page1.html">Page 1</a>
+                <a class="nav_link" href="contactus.html">Contact Us!</a>
+                <a class="nav_link" href="\WDD130/index.html">Home Page</a>
+                <a class="nav_link" href="tech-habits/site-plan.html">Tech Habits Siteplan</a>
+            </div>
+    </header>
+    <div id="content">
+        <main>
+            <img src="WDD130\tech-habits\images\rubiks-cube-juan-pablo-serrano-arenas.jpg" alt="Rubiks cube in front of computer">
+            <h1>This is some text</h1>
+            <h1>This is some text</h1>
+            
+
+        </main>
+    </div>
+    <footer>
+        <p>Copyright 2024 - Ethan Foltz -
+            <!-- target="_blank" means that it will open a new tab when you click on it.
+            The default is "_self" which replaces the current tab you are on with the link.
+            You want the default if it is a link to your own website.-->
+            <a href="https://www.youtube.com/" target="_blank">Favorite Site</a>
+        </p>
+    </footer>
+    <script>
+        var coll = document.getElementsByClassName("menu_button");
+            var i;
+            for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                content.style.maxHeight = null;
+                } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+            }
+    </script>
+</body>
+</html>
