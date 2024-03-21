@@ -4,8 +4,8 @@ Fonts are separated by a | */
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono&family=Anta&display=swap');
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #73628a   ;
-  --secondary-color: #A9927D ;
+  --primary-color: #73628a;
+  --secondary-color: #A9927D;
   --accent1-color: #294936;
   --accent2-color: #D5EAF8;
 
