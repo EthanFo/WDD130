@@ -10,6 +10,8 @@ C98CA7 - puce
   --secondary-color: #D5BBB1; /*#A9927D #D5BBB1*/
   --accent1-color: #294936;
   --accent2-color: #D5EAF8;
+
+  --menu-font: sans-serif;
 }
 
 body {
@@ -85,40 +87,60 @@ h1 {
 
 img {
     margin: 0 auto;
-    max-width: 200px;
 }
 
 /* Header */
+.logo {
+  max-width: 50px;
+}
+
 header {
-    display: block;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 300px 100px auto 100px 300px;
+    justify-items: center;
     text-align: center;
-    /* position: fixed; */
+    position: fixed;
     padding: 20px;
     margin: 0 auto;
     background-color: var(--primary-color);
     width: 100%;
 }
 
-.nav_link { 
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    color: #FBF7F0;
-    background-color: var(--primary-color);
-    font-size: 1em;
-    text-decoration: none;
-    justify-content: center;
+.header1 {
+  grid-column: 2/3;
 }
+.header2 {
+  grid-column: 3/4;
+}
+
+.nav_link { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav_link_item {
+  padding: 20px;
+  color: #FBF7F0;
+  background-color: var(--primary-color);
+  font-family: var(--menu-font);
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.content_expand {
+    padding: auto;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
 
 .active, .menu_button:hover {
     background-color: var(--accent2-color);
     color: black;
   }
 
-.menu_button { /*These are the defaults. 
-    In order to change how it looks when 
-    it is displayed go to media only screen below*/
+.menu_button {
     justify-content: center;
     text-align: center;
     cursor: pointer;
@@ -134,30 +156,25 @@ header {
     text-decoration: none;
   }
 
-.content_expand {
-    padding: 0;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease-out;
-  }
 
 /* end of header */
 
 /* footer */
-    footer {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        height: auto;
-        margin: 0 auto;
-        padding: 20px;
-        color: #FBF7F0;
-        background-color: var(--primary-color);
-    }
-
-  footer a {
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
     color: #FBF7F0;
-  }
+    background-color: var(--primary-color);
+    /* position: fixed; */
+}
+
+footer a {
+  color: #FBF7F0;
+}
 /* end of footer */
 
 /* contact us */
