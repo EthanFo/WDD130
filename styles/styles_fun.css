@@ -33,15 +33,20 @@ header {
     width: 100%;
 }
 
+.content_expand a {
+  color: #FBF7F0;
+  font-size: 1em;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
 .nav_link { 
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    color: #FBF7F0;
-    background-color: #353B34;
-    font-size: 1em;
-    text-decoration: none;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #353B34;
+  justify-content: center;
 }
 
 /* Style the button that is used to open and close the collapsible content */
@@ -50,6 +55,10 @@ header {
   .active, .menu_button:hover {
     background-color: #656641;
     color: #FBF7F0;
+  }
+
+  .active, .content_expand{
+    padding: 0 0 40px 0;
   }
 
 .menu_button { /*These are the defaults. 
@@ -86,6 +95,7 @@ header {
     }
     .content_expand {
       max-height: fit-content;
+      padding: 0;
     }
 }
 /* Style the collapsible content. Note: hidden by default */
