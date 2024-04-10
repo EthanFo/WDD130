@@ -24,6 +24,7 @@ body {
     background-color: var(--secondary-color);
     padding: 0px 5%;
     margin: 0 auto;
+    max-width: 900px;
 }
 
 .content-contact {
@@ -50,6 +51,7 @@ main {
   height: auto;
   grid-column: 1/3;
   margin: 0 auto;
+  border: #000;
 }
 
 li {
@@ -199,6 +201,7 @@ footer {
 
 footer a {
   color: #FBF7F0;
+  padding: 20px;
 }
 /* end of footer */
 
